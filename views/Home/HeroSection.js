@@ -21,18 +21,18 @@ const HeroSection = () => {
       <View style={style.action}>
         <View style={{width: vw(33)}}>
           <TouchableOpacity activeOpacity={0.5}>
-            <Text> Play </Text>
+            <Text style={{color: '#d5d6d7'}}> Play </Text>
           </TouchableOpacity>
         </View>
         <View style={{width: vw(33)}}>
           <TouchableOpacity activeOpacity={0.5}>
-            <Text> Play </Text>
+            <Text style={{color: '#d5d6d7'}}> Play </Text>
           </TouchableOpacity>
         </View>
 
         <View style={{width: vw(33)}}>
           <TouchableOpacity activeOpacity={0.5}>
-            <Text> Play </Text>
+            <Text style={{color: '#d5d6d7'}}> Play </Text>
           </TouchableOpacity>
         </View>
       </View>

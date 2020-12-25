@@ -1,9 +1,10 @@
 import React from 'react';
-import {View, StyleSheet, ScrollView, Image} from 'react-native';
+import {Text, View, StyleSheet, ScrollView, Image} from 'react-native';
 import {vw, vh} from 'react-native-css-vh-vw';
-const MovieRow = () => {
+const MovieRow = (props) => {
   return (
-    <>
+    <View style={{marginBottom: 30}}>
+      <Text style={style.title}>{props.title}</Text>
       <View style={style.container}>
         <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
           <Image
@@ -11,49 +12,79 @@ const MovieRow = () => {
               uri:
                 'https://www.coverwhiz.com/uploads/movies/Thor-The-Dark-World.jpg',
             }}
-            style={style.cover}
+            style={{
+              ...style.cover,
+              width: vw(props.width) || vw(30),
+              height: vh(props.height) || vh(20),
+            }}
           />
           <Image
             source={{
               uri:
                 'https://www.coverwhiz.com/uploads/movies/Thor-The-Dark-World.jpg',
             }}
-            style={style.cover}
+            style={{
+              ...style.cover,
+              width: vw(props.width) || vw(30),
+              height: vh(props.height) || vh(20),
+            }}
           />
           <Image
             source={{
               uri:
                 'https://www.coverwhiz.com/uploads/movies/Thor-The-Dark-World.jpg',
             }}
-            style={style.cover}
+            style={{
+              ...style.cover,
+              width: vw(props.width) || vw(30),
+              height: vh(props.height) || vh(20),
+            }}
           />
           <Image
             source={{
               uri:
                 'https://www.coverwhiz.com/uploads/movies/Thor-The-Dark-World.jpg',
             }}
-            style={style.cover}
+            style={{
+              ...style.cover,
+              width: vw(props.width) || vw(30),
+              height: vh(props.height) || vh(20),
+            }}
           />
           <Image
             source={{
               uri:
                 'https://www.coverwhiz.com/uploads/movies/Thor-The-Dark-World.jpg',
             }}
-            style={style.cover}
+            style={{
+              ...style.cover,
+              width: vw(props.width) || vw(30),
+              height: vh(props.height) || vh(20),
+            }}
           />
           <Image
             source={{
               uri:
                 'https://www.coverwhiz.com/uploads/movies/Thor-The-Dark-World.jpg',
             }}
-            style={style.cover}
+            style={{
+              ...style.cover,
+              width: vw(props.width) || vw(30),
+              height: vh(props.height) || vh(20),
+            }}
           />
         </ScrollView>
       </View>
-    </>
+    </View>
   );
 };
 const style = StyleSheet.create({
+  title: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    marginBottom: 10,
+    color: '#d5d6d7',
+  },
   container: {
     flex: 1,
     flexDirection: 'row',
@@ -62,11 +93,9 @@ const style = StyleSheet.create({
     width: '100%',
   },
   cover: {
-    width: vw(30),
-    height: vh(20),
     resizeMode: 'cover',
     paddingLeft: 5,
-    marginRight: 5,
+    marginRight: 10,
   },
 });
 

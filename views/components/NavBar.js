@@ -36,9 +36,12 @@ const style = StyleSheet.create({
     alignItems: 'center',
     width: '100%',
     position: 'absolute',
-    top: 50,
+    top: 0,
+    paddingTop: 50,
+    paddingBottom: 10,
     left: 0,
     zIndex: 10,
+    backgroundColor: 'rgba(0,0,0,0.2)',
   },
   text: {
     fontSize: 20,
